@@ -1,53 +1,44 @@
 * {
-  //    border: 1px black solid;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 body {
   font-family: 'Inconsolata', monospace;
-  font-family: 'Roboto', sans-serif;
-}
+  font-family: 'Roboto', sans-serif; }
 
 .header-container {
   width: 100%;
-  border: 1px black solid;
-  .title {
+  border: 1px black solid; }
+  .header-container .title {
     margin: 20px auto;
     font-size: 30px;
     height: 40px;
     width: 400px;
-    text-align: center;
-  }
-  nav {
+    text-align: center; }
+  .header-container nav {
     width: 400px;
     margin: 5px auto;
     display: flex;
     align-content: center;
-    justify-content: center;
-    a {
+    justify-content: center; }
+    .header-container nav a {
       flex: 3;
       width: 15px;
-      text-align: center;
-    }
-  }
-}
+      text-align: center; }
 
 .wrapper {
   margin: 0 auto;
-  width: 500px;
-}
+  width: 500px; }
 
 .main-container {
-  width: 100%;
-}
+  width: 100%; }
 
 article {
   font-family: 'Inconsolata', monospace;
   margin: 5px 0;
-  line-height: 18px;
-  p {
-    margin: 5px 0px;
-  }
-}
+  line-height: 18px; }
+  article p {
+    margin: 5px 0px; }
+
+/*# sourceMappingURL=main.css.map */
