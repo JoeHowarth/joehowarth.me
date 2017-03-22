@@ -39,6 +39,7 @@ article {
   margin: 5px 0;
   line-height: 18px; }
   article p {
+    display: none;
     margin: 5px 0px; }
 
 /*# sourceMappingURL=main.css.map */

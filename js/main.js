@@ -1,16 +1,41 @@
 /*jshint jquery: true*/
 $(document).ready(function () {
-  $(".bio").toggle();
 
 
-  var divs = $('bio').children,
-    current = 0;
+  var toIn = $('.bio').children().first();
+  //  toIn.fadeOut().delay.next().fadeOut();
 
-  myFadeIn($divs.eq(current));
 
-  function myFadeIn(div) {
-    $div.toggle(slow, myFadeIn($div.next()));
+  function cycleIn(animTime, interTime) {
+    // fades in siblings,
+    toIn = toIn.fadeIn(animTime).next();
+    if (toIn.length !== 0) {
+      setTimeout(function () {
+        cycleIn(animTime, interTime);
+      }, interTime);
+    }
   }
+  cycleIn(1000, 1500); // executes above
+
+  function type(string, element) {
+    (function writer(i) {
+      if (string.length <= i++) {
+        element.value = string;
+        return;
+      }
+      element.value = string.substring(0, i);
+      if (element.value[element.value.length - 1] != " ") element.focus();
+      var rand = Math.floor(Math.random() * (100)) + 140;
+      setTimeout(function () {
+        writer(i);
+      }, rand);
+    })(0);
+  }
+  
+  $type("testing", $('#type-area')[0]);
+  alert('past type');
+
+
 
 
 
