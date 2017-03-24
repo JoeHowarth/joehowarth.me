@@ -10,7 +10,7 @@
 //    $(target).css("background-image", "url(../" + highres + ")");
 //  });
 //});
-window.onload(function () {
+$(window).on('load', function () {
   $('#cobble').append('<img id="img_cobble" class="img_highres" src="assets/dark_cobble1920.jpg">');
   $(".img_highres").off().on("load", function () {
     $("body").css({
