@@ -11,24 +11,8 @@ html {
     background-color: #000;
 }
 
-//.img_highres {
-//  display: none;
-//}
-
-#div_whatever1 {
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(PATH_TO_LOW_RES_PHOTO_1);
-}
-
-#div_whatever2 {
-  width: 200px;
-  height: 200px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(PATH_TO_LOW_RES_PHOTO_2);
+.img_highres {
+  display: none;
 }
 
 body {
@@ -44,7 +28,7 @@ body {
 
 .header-container {
   width: 100%;
-  border-bottom: 4px #111 solid;
+  border-bottom: 1px #000 solid;
   height: 40vh;
   position: relative;
   background-color: #000;
@@ -126,3 +110,5 @@ article {
     border: 1px black solid;
   }
 }
+
+
