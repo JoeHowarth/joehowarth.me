@@ -8,7 +8,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+  <!--  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto:300,400,800" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300i,400,400i,700|Orbitron:400,500,900|Roboto:300,400,900|Lato:100,200,400,700" rel="stylesheet">
 
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -20,29 +21,27 @@
 <body>
 
   <div class="header-container">
-    <header class="wrapper clearfix">
-      <h1 class="title">Joe Howarth</h1>
-      <nav>
-
-        <a href="#">About Me</a>
-        <a href="#">Projects</a>
-        <a href="#">Resume</a>
-
-      </nav>
+    <header class="title">
+      JOSEPH.HOW<span>ARTH</span>
     </header>
+    
+    <!-- nav defaults to display:none, comes in w/ animation-->
+    <nav>
+      <div id="about-nav" href="#"><p>About Me</p></div>
+      <div id="proj-nav" href="#"><p>Projects</p></div>
+      <div id="resume-nav" href="#"><p>Resume</p></div>
+    </nav>
+
   </div>
 
   <div class="main-container">
     <div class="main wrapper clearfix">
 
+
+
       <article>
         <section class="bio">
-          <p>Hello World!</p>
-          <p>>This is Joe Howarth speaking</p>
-          <p>I don't really know what to put here yet</p>
-          <p>And instead of figuring it out... </p>
-          <p>I'm adding this</p>
-          <p id="type-area"></p>
+          <p></p>
         </section>
       </article>
 
@@ -58,6 +57,8 @@
       <h3></h3>
     </footer>
   </div>
+  <!--  END FOOTER -->
+
 
   <!-- JS Libraries -->
   <script async defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -88,4 +89,5 @@
   </script>
 -->
 </body>
+
 </html>
