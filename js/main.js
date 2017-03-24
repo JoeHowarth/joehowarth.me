@@ -10,12 +10,16 @@
 //    $(target).css("background-image", "url(../" + highres + ")");
 //  });
 //});
-
-$(".img_highres").off().on("load", function () {
-  $("body").css({
-    "background-image": "url(../assets/dark_cobble1920.jpg)"
+window.onload(function () {
+  $('#cobble').append('<img id="img_cobble" class="img_highres" src="assets/dark_cobble1920.jpg">');
+  $(".img_highres").off().on("load", function () {
+    $("body").css({
+      "background-image": "url(../assets/dark_cobble1920.jpg)"
+    });
   });
 });
+
+
 
 $(document).ready(function () {
 
