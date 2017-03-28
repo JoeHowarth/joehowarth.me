@@ -1,15 +1,7 @@
 /*jshint jquery: true*/
 
 
-//$(function () {
-//  $(".img_highres").off().on("load", function () {
-//    var id = $(this).attr("id");
-//    var highres = $(this).attr("src").toString();
-//    alert(highres);
-//    var target = '#'+id.substring(4);
-//    $(target).css("background-image", "url(../" + highres + ")");
-//  });
-//});
+
 $(window).on('load', function () {
   $('#cobble').append('<img id="img_cobble" class="img_highres" src="assets/dark_cobble1920.jpg">');
   $(".img_highres").off().on("load", function () {
@@ -19,52 +11,51 @@ $(window).on('load', function () {
   });
 });
 
+$(function () {
+  var title_span = $('.title span');
+
+  title_span.typed({
+    strings: ['ARTH'],
+    startDelay: 1000,
+    typeSpeed: 60,
+    showCursor: false,
+  });
+
+//  var toIn = $('.bio').children().first();
+//  //  toIn.fadeOut().delay.next().fadeOut();
+//  toIn.siblings().show();
+//
+//  function cycleIn(animTime, interTime) {
+//    // fades in siblings,
+//    toIn = toIn.fadeIn(animTime).next();
+//    if (toIn.length !== 0) {
+//      setTimeout(function () {
+//        cycleIn(animTime, interTime);
+//      }, interTime);
+//    }
+//  }
 
 
-$(document).ready(function () {
 
-  //  var bio = $('.bio');
-  //  bio.append('<p>before Testing</p>').delay(5000, function() {
-  //    bio.append('<p>Testing, testing</p>');
-  //  });
 
 });
 
-//
-//  var strings = ['Hello World!',
-//     'This is Joe Howarth speaking',
-//       'hmm, what should I write?',
-//       'Well, this is MY site after all, <br> so I\'ll talk a little about myself!',
-//       '...'];
-//  
-//  var bio = $('.bio');
-//  var p = '<p>_ </p>';
-//  $('.bio').append('<p>_ _</p>');
-//  var line = $('bio :nth-child(1)');
-//  line.append('hello-world').after(p);
-//  
-//  
 
 
 
-
-
-//
 //  function typedCallbackFn() {
 //    
 //    if (counter++ >= strings.length - 1) {
 //      return;      
 //    }
-////    alert(strings[counter]);
 //    bio.append(p);
 //    line = bio.children.eq(counter);
 //    line.append(strings[counter]);
-///    typedCallbackFn();
-////    line.typed({
-////      strings: [strings[counter]],
-////      typeSpeed: 8,
-////      callback: typedCallbackFn()
-////    });
+//    line.typed({
+//      strings: [strings[counter]],
+//      typeSpeed: 8,
+//      callback: typedCallbackFn()
+//    });
 //    
 //  }
 //  typedCallbackFn();
@@ -106,17 +97,5 @@ $(document).ready(function () {
 
 
 
-var toIn = $('.bio').children().first();
-//  toIn.fadeOut().delay.next().fadeOut();
-toIn.siblings().show();
 
-function cycleIn(animTime, interTime) {
-  // fades in siblings,
-  toIn = toIn.fadeIn(animTime).next();
-  if (toIn.length !== 0) {
-    setTimeout(function () {
-      cycleIn(animTime, interTime);
-    }, interTime);
-  }
-}
 //cycleIn(1000, 1500); // executes above
