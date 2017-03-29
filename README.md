@@ -1,2 +1,2 @@
-# joehowarth.me
+# joseph.how
 WIP personal site 
