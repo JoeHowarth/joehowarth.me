@@ -1,16 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/header';
+import AboutMe from './components/aboutme';
+import styled from 'styled-components';
+
 
 class App extends Component {
+
+
   render() {
+    const AppWrapper = styled.div`
+      display: flex;
+      flex-direction: row;
+      font-family: 'Raleway', sans-serif;
+    `
+    //const theme = {
+
     return (
-      <div className="App">
+      <AppWrapper>
         <Header/>
         <AboutMe/>
-      </div>
+      </AppWrapper>
     );
   }
 }
+
+
 
 export default App;
