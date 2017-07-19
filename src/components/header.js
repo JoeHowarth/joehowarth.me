@@ -1,16 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import {CenterWrapper} from './prestyled';
+import { CenterWrapper, NavLink} from './prestyled';
+import { Link } from 'react-router-dom';
+
 
 export default class Header extends React.Component {
 
   render () {
-    const links = ['About Me', 'Projects', 'Resume']
+    const links = {
+      '/about_me': 'About Me',
+      '/projects': 'Projects',
+      '/resume': 'Resume'
+    }
     return (
         <HeaderWrapper col>
-          <CenterWrapper height='100px' >
-            <Title>Joseph.how(arth)</Title>
-          </CenterWrapper>
+          <TitleLink height='100px' >
+            <Link to='/'>Joseph.how(arth)</Link>
+          </TitleLink>
           <Nav links={links}></Nav>
         </HeaderWrapper>
     );
@@ -18,42 +24,52 @@ export default class Header extends React.Component {
 }
 
 let Nav = (props) => {
-    const links = props.links.map((link,index) => {
-      return <NavLink key={index}><p>{link}</p></NavLink>
+    const links = Object.entries(props.links).map(([url, desc], index) => {
+      return (
+        <NavLink height='70px' key={index}>
+          <Link to={url}>{desc}</Link>
+        </NavLink>
+      )
     });
-    const NavStyle = styled.div`
-      width: 200px;
-      height: ${links.length * 80}px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      align-content: center;
-    `
     return (
       <NavStyle>
         {links}
       </NavStyle>
     );
 }
+const NavStyle = styled.div`
+  width: 200px;
+  height: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+`
+
+const TitleLink = styled(NavLink)`
+  font-size: 2.2em;
+  & a {
+    color: #666;
+  }
+  &:focus a {
+    color: #333;
+  }
+
+`
 
 const HeaderWrapper = styled(CenterWrapper)`
   width: 350px;
   height: 100vh;
   justify-content: flex-start;
-  border-right: 1px #AAA solid;
+  background: #f5f5fb;
+  box-shadow: 0 0 4px #AAA;
+  z-index: 5;
 `
-const Title = styled.p`
-  font-size: 2.5em;
-  color: #666;
-`
-const NavLink = styled(CenterWrapper)`
-  color: #888;
-  & p {
-    font-size: 2em;
-    transition: all .1s;
-  }
-  &:hover p {
-    font-size: 2.4em;
-  }
-`
+
+// const Title = styled(Link)`
+//   font-size: 2.5em;
+//   color: #666;
+//   text-decoration: none;
+// `

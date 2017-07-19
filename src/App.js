@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import Header from './components/header';
-import AboutMe from './components/aboutme';
+import { HashRouter, Switch, Route } from 'react-router-dom';
+import Header   from './components/header';
+import Splash   from './components/splash';
+import Projects from './components/projects';
+import AboutMe  from './components/aboutme';
+import Resume   from './components/resume';
 import styled from 'styled-components';
+
 
 
 class App extends Component {
@@ -12,14 +17,22 @@ class App extends Component {
       display: flex;
       flex-direction: row;
       font-family: 'Raleway', sans-serif;
+      color: #666
     `
     //const theme = {
 
     return (
-      <AppWrapper>
-        <Header/>
-        <AboutMe/>
-      </AppWrapper>
+      <HashRouter>
+        <AppWrapper>
+          <Header/>
+          <Switch>
+            <Route exact path='/'   component={Splash}/>
+            <Route path='/about_me' component={AboutMe}/>
+            <Route path='/projects' component={Projects}/>
+            <Route path='/resume'   component={Resume}/>
+          </Switch>
+        </AppWrapper>
+      </HashRouter>
     );
   }
 }
