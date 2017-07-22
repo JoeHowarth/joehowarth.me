@@ -14,10 +14,15 @@ class App extends Component {
 
   render() {
     const AppWrapper = styled.div`
-      display: flex;
-      flex-direction: row;
+      display: grid;
+      width: 100%;
+      height: 100vh;
+      grid-template-columns: 350px 1fr;
+      ${''/* flex-direction: row; */}
       font-family: 'Raleway', sans-serif;
-      color: #666
+      color: #666;
+      align-items: stretch;
+      justify-items: stretch;
     `
     //const theme = {
 

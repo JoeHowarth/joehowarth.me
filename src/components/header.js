@@ -47,29 +47,24 @@ const NavStyle = styled.div`
   align-items: center;
   align-content: center;
 `
-
 const TitleLink = styled(NavLink)`
   font-size: 2.2em;
   & a {
     color: #666;
   }
   &:focus a {
-    color: #333;
+    color: #33;
   }
-
 `
-
-const HeaderWrapper = styled(CenterWrapper)`
-  width: 350px;
+const HeaderWrapper = styled.div`
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
-  justify-content: flex-start;
+  width: 350px;
   background: #f5f5fb;
   box-shadow: 0 0 4px #AAA;
   z-index: 5;
+  position: fixed;
 `
-
-// const Title = styled(Link)`
-//   font-size: 2.5em;
-//   color: #666;
-//   text-decoration: none;
-// `

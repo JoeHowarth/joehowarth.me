@@ -8,10 +8,10 @@ import { CenterWrapper, Content } from './prestyled';
 export default class Splash extends React.Component {
   render () {
     const SplashWrapper = styled(Content)`
-      position: relative;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      justify-content: center;
+      /*height: 100%;*/
     `
     const Bot = styled.div`
       flex: 3;
@@ -34,7 +34,7 @@ export default class Splash extends React.Component {
           <Portrait/>
         </Top>
         <Bot>
-          I love <br/>AI // React // T.R.
+          I love making machines do work <br/> (and Theodore Roosevelt)
         </Bot>
       </SplashWrapper>
     );
@@ -44,8 +44,8 @@ export default class Splash extends React.Component {
 const Portrait = styled.div`
   margin: 20px;
   box-shadow: 0 0 50px 5px rgba(200,200,200, .6);
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background: radial-gradient(circle,
                               rgba(200,200,200, 0.0),
                               rgba(200,200,200, 0.1)),

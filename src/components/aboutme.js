@@ -1,14 +1,19 @@
 import React from 'react';
-import {CenterWrapper} from './prestyled';
+import {CenterWrapper, Content} from './prestyled';
+import styled from 'styled-components';
 
 export default class AboutMe extends React.Component {
 
   render() {
     return (
-      <CenterWrapper col>
+      <AboutMeContainer col>
         <h1>I'm awesome!!</h1>
         <h2>nuf said...</h2>
-      </CenterWrapper>
+      </AboutMeContainer>
     );
   }
 }
+
+const AboutMeContainer = styled(Content)`
+
+`
