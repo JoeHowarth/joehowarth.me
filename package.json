@@ -3,13 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://www.joseph.how",
-
   "dependencies": {
     "gh-pages": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.2",
-    "react-scripts": "1.0.10",
+    "react-scripts": "^1.0.14",
     "styled-components": "^2.1.1"
   },
   "scripts": {

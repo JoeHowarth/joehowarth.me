@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+//import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { injectGlobal } from 'styled-components';
@@ -16,6 +16,6 @@ injectGlobal`
     background-color: ghostwhite;
     padding: 0;
     margin: 0;
-    
+
   }
 `
