@@ -18,14 +18,11 @@ class App extends Component {
       width: 100%;
       height: 100vh;
       grid-template-columns: 350px 1fr;
-      ${''/* flex-direction: row; */}
       font-family: 'Raleway', sans-serif;
       color: #666;
       align-items: stretch;
       justify-items: stretch;
     `
-    //const theme = {
-
     return (
       <HashRouter>
         <AppWrapper>

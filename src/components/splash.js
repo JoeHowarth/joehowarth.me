@@ -34,7 +34,7 @@ export default class Splash extends React.Component {
           <Portrait/>
         </Top>
         <Bot>
-          I love making machines do work <br/> (and Theodore Roosevelt)
+          ~~SITE CURRENTLY BEING REDONE~~
         </Bot>
       </SplashWrapper>
     );
