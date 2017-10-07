@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 // import { Link } from 'react-router-dom';
 
-import { CenterWrapper, NavLink} from './prestyled';
+// import { CenterWrapper, NavLink} from './prestyled';
 // import { projects } from '../data/projectData';
 import Github_icon from '../assets/GitHub-Mark-32px.png';
 
@@ -92,7 +92,7 @@ const GithubButtonBox = styled.div`
 const GithubButton = ({repo}) => {
   return (
     <GithubButtonBox>
-      <img src={Github_icon}/>
+      <img src={Github_icon} alt=""/>
       <a href={repo}>Repo</a>
     </GithubButtonBox>
   );
